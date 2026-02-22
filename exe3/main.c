@@ -7,8 +7,8 @@ const int BTN_PIN_VERDE = 26;
 const int LED_PIN_VERMELHO= 4;
 const int LED_PIN_VERDE = 6;
 
-const bool btn_vermelho_pressed = false;
-const bool btn_verde_pressed = false;
+bool btn_vermelho_pressed = false;
+bool btn_verde_pressed = false;
 
 int main() {
   stdio_init_all();
