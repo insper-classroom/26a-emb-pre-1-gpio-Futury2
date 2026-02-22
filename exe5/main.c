@@ -18,8 +18,8 @@ int main() {
     int cnt_1 = 0;
     int cnt_2 = 0;
 
-    bool last_btn_1_state = true;
-    bool last_btn_2_state = true;
+    bool last_btn_1_state = gpio_get(BTN_PIN);
+    bool last_btn_2_state = gpio_get(BTN_PIN_2);
 
     while (true) {
         sleep_ms(20); 
