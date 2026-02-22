@@ -13,9 +13,13 @@ int main(void) {
     int b = 5; 
     int result = multiplyNumbers(a, b);
 
+    printf("Resultado de %d * %d = %d\n", a, b, result);
     int arr[NUM_ELEMENTS];
     for(int i = 0; i < NUM_ELEMENTS; i++) { //arrayIndexOutOfBounds
         arr[i] = i;
+    }
+    for (int i = 0; i < NUM_ELEMENTS; i++) {
+        printf("arr[%d] = %d\n", i, arr[i]);
     }
 
     return 0;
