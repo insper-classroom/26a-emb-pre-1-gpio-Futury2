@@ -26,15 +26,19 @@ int main() {
         bool current_btn_1_state = gpio_get(BTN_PIN);
         bool current_btn_2_state = gpio_get(BTN_PIN_2);
 
-        if (current_btn_1_state && !last_btn_1_state) {
-            printf("Botao 1: %d\n", cnt_1++);
+        if (!current_btn_1_state && last_btn_1_state) {
+            if(!gpio_get(BTN_PIN)){
+                printf("Botao 1: %d\n", cnt_1++);
+            };
         }
 
-        if (current_btn_2_state && !last_btn_2_state) {
-            printf("Botao 2: %d\n", cnt_2++);
+        if (!current_btn_2_state && last_btn_2_state) {
+            if(!gpio_get(BTN_PIN_2)){
+                printf("Botao 2: %d\n", cnt_2++);
+            };
         }
 
-        last_btn_1_state = current_btn_1_state;
-        last_btn_2_state = current_btn_2_state;
+        last_btn_1_state = gpio_get(BTN_PIN);
+        last_btn_2_state = gpio_get(BTN_PIN_2);
     }
 }
